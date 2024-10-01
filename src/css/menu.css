@@ -1,0 +1,51 @@
+.menu {
+    border-block-end: 1px solid black;
+    block-size: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__boton {
+    inline-size: fit-content;
+    block-size: 35px;
+    padding-inline: 26px 12px;
+    background-color: var(--color-secundario);
+    background-image: url("../../public/img/header/Group.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    border-radius: 18px;
+    border-color: #2a7ae4;
+    font-weight: bold;
+    color: #2a7ae4;
+}
+
+.menu__enlaces {
+    flex-basis: 653px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-inline: 15px;
+
+    @media (width <= 768px) {
+        display: none;
+    }
+}
+
+.menu__enlace__item {
+    block-size: fit-content;
+
+    & a {
+        text-decoration: none;
+        color: black;
+        transition:
+            transform 0.2s linear,
+            font-weight 0.2s linear,
+            text-decoration 0.2s linear;
+        &:hover {
+            color: #2a7ae4;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.mis-datos {
+}
+
+.mis-datos__general {
+    display: grid;
+    margin-block-start: 32px;
+    grid-template-columns: minmax(auto, 751px) minmax(auto, 368px);
+    grid-template-rows: minmax(160px, auto) minmax(240px, auto) minmax(
+            50px,
+            auto
+        );
+}
+
+.mis-datos__titulo {
+    margin: 0;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    align-self: end;
+    font-size: 5.2rem;
+}
+
+.mis-datos__texto {
+    margin: 0;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    align-self: center;
+    font-size: 2.2rem;
+    line-height: 1.7;
+}
+
+.mis-redes {
+    margin: 0;
+    padding: 0;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    align-self: center;
+    display: flex;
+    gap: 32px;
+}
+
+.mis-redes__item {
+    list-style-type: none;
+
+    & a {
+        background-image: url("/public/img/main/mis_datos/Vector.png");
+        background-repeat: no-repeat;
+        background-position: center right;
+        text-decoration: none;
+        font-weight: bold;
+        inline-size: fit-content;
+        padding-right: 16px;
+        color: black;
+        transition:
+            color 0.15s linear,
+            font-size 0.15s linear,
+            font-weight 0.15s linear,
+            text-decoration 0.15s linear;
+
+        &:hover {
+            color: lightslategrey;
+            font-size: 1.7rem;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}
+
+.mis-datos__imagen {
+    max-inline-size: 360px;
+    aspect-ratio: 1 / 1;
+    grid-column: 2 / span 1;
+    grid-row: 1 / -1;
+    align-self: startr;
+    justify-self: center;
+}
+
+@media (width <= 768px) {
+    .mis-datos__general {
+        grid-template-rows: minmax(52px, auto) minmax(170px, auto) minmax(
+                50px,
+                auto
+            );
+    }
+
+    .mis-datos__titulo {
+        font-size: 2.2rem;
+    }
+
+    .mis-datos__texto,
+    a {
+        font-size: 1.6rem;
+    }
+
+    .mis-datos__imagen {
+        max-inline-size: 146px;
+        justify-self: center;
+        align-self: center;
+    }
+}
+
+@media (width <= 360px) {
+    .mis-datos__general {
+        grid-template-columns: minmax(auto, 360px);
+        grid-template-rows:
+            minmax(auto, 100px) minmax(auto, 100px) minmax(auto, 240px)
+            minmax(auto, 70px);
+    }
+
+    .mis-datos__imagen {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        max-inline-size: 98px;
+        justify-self: left;
+        align-self: center;
+    }
+
+    .mis-datos__titulo {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .mis-datos__texto {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        font-size: 1.4rem;
+    }
+
+    .mis-redes {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+        overflow-x: scroll;
+        gap: 30px;
+        block-size: 35px;
+        border-block: 1px solid black;
+    }
+
+    .mis-redes__item {
+        block-size: 20px;
+        margin-block: auto;
+
+        & a {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.mis-datos__sobre-mi {
+    background-color: #eaf2fd;
+    padding-block: 64px;
+    margin-block: 64px 32px;
+}
+
+.mis-datos__sobre-mi__titulo {
+    font-size: 3.2rem;
+    margin-block: 0;
+}
+
+.mis-datos__sobre-mi__texto {
+    margin-block-start: 16px;
+    margin-block: 0;
+    line-height: 1.8;
+}
+
+@media (width <= 768px) {
+    .mis-datos__sobre-mi {
+        padding-block: 32px;
+        margin-block: 32px;
+    }
+
+    .mis-datos__sobre-mi__titulo {
+        font-size: 2.2rem;
+    }
+
+    .mis-datos__sobre-mi__texto {
+        font-size: 1.4rem;
+    }
+}
+
+@media (width <= 360px) {
+    .mis-datos__sobre-mi {
+        margin-block: 16px 0;
+        padding-block: 16px;
+    }
+}

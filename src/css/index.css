@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("./atributos.css");
+@import url("./mis-datos.css");
+@import url("./menu.css");
+
+:root {
+    font-size: 10px;
+    font-family: "Noto Sans", sans-serif;
+
+    --color-primario: #fff;
+    --color-secundario: #eaf2fd;
+}
+
+body {
+    writing-mode: horizontal-tb;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+header {
+}
