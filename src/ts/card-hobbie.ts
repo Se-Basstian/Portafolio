@@ -42,7 +42,7 @@ export class CardHobbie extends LitElement {
         0 -1px 3px;
 
       &:hover {
-        inline-size: 100%;
+        inline-size: 1200px;
       }
     }
 
