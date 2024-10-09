@@ -1,0 +1,34 @@
+.formacion {
+    background-color: #eaf2fd;
+    padding-block: 82px;
+
+    @media (width <= 768px) {
+        padding-block: 32px;
+    }
+}
+
+.formacion__titulo {
+    inline-size: fit-content;
+    margin-inline: auto;
+    margin-block-end: 32px;
+
+    @media (width <= 768px) {
+        margin-block-start: 0;
+    }
+}
+
+.formacion__cards {
+    display: flex;
+    /* flex-flow: wrap; */
+    justify-content: space-between;
+
+    @media (width <= 700px) {
+        flex-flow: wrap;
+    }
+
+    @media (width <= 360px) {
+        flex-flow: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+}

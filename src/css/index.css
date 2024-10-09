@@ -2,13 +2,15 @@
 @import url("./atributos.css");
 @import url("./mis-datos.css");
 @import url("./menu.css");
+@import url("./skills.css");
+@import url("./hobbies.css");
+@import url("./exp.css");
+@import url("./formacion.css");
+@import url("./contacto.css");
 
 :root {
     font-size: 10px;
     font-family: "Noto Sans", sans-serif;
-
-    --color-primario: #fff;
-    --color-secundario: #eaf2fd;
 }
 
 body {
@@ -17,5 +19,10 @@ body {
     margin: 0;
 }
 
-header {
+h2 {
+    font-size: 3.2rem;
+
+    @media (width <= 768px) {
+        font-size: 2.2rem;
+    }
 }

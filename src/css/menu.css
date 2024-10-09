@@ -10,14 +10,24 @@
     inline-size: fit-content;
     block-size: 35px;
     padding-inline: 26px 12px;
-    background-color: var(--color-secundario);
+    background-color: #eaf2fd;
     background-image: url("../../public/img/header/Group.png");
     background-repeat: no-repeat;
     background-position: center left;
-    border-radius: 18px;
-    border-color: #2a7ae4;
+    border-radius: 10px;
+    border: 2px solid skyblue;
     font-weight: bold;
     color: #2a7ae4;
+    transition: transform 0.2s linear;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        border-color: red;
+        color: red;
+    }
 }
 
 .menu__enlaces {

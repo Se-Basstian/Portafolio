@@ -1,0 +1,26 @@
+.skills {
+    padding-block: 2px 88px;
+
+    @media (width <= 768px) {
+        padding-block-end: 44px;
+    }
+}
+
+.skills__titulo {
+    text-align: center;
+    margin-block: 0 32px;
+}
+
+.skills__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    @media (width <= 768px) {
+        justify-content: center;
+    }
+    @media (width <= 360px) {
+        gap: 16px;
+    }
+}

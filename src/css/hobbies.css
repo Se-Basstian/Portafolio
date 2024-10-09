@@ -1,0 +1,22 @@
+.hobbies {
+    padding-block: 44px 88px;
+
+    @media (width <= 768px) {
+        padding-block: 5px 22px;
+    }
+}
+
+.hobbies__titulo {
+    inline-size: fit-content;
+    margin-inline: auto;
+}
+
+.hobbies__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (width <= 768px) {
+        align-items: center;
+    }
+}
