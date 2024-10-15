@@ -3,6 +3,15 @@ import "./card-hobbie";
 import "./seccion-exp";
 import "./card-formacion";
 
+const menuLista = document.querySelector(".menu__lista") as HTMLImageElement;
+const menuEnlaces = document.querySelector(
+  ".menu__enlaces",
+) as HTMLUListElement;
+menuLista.addEventListener("click", () => {
+  menuEnlaces.classList.toggle("menu__enlaces--tablet");
+});
+
+// Formulario
 const formulario = document.querySelector("form.formulario");
 
 if (formulario instanceof HTMLElement) {
