@@ -5,15 +5,12 @@ import { customElement, property } from "lit/decorators.js";
 export class CardSkill extends LitElement {
   @property()
   titulo = "Título";
-  @property()
-  imgUrl?: string;
-  @property()
-  imgAlt?: string;
 
   render() {
     return html`
       <div>
-        <img src="${this.imgUrl}" alt="${this.imgAlt}" />
+        <!-- <img src="{this.imgUrl}" alt="{this.imgAlt}" /> -->
+        <slot name="img"></slot>
         <h3>${this.titulo}</h3>
         <p><slot></slot></p>
       </div>
@@ -39,7 +36,7 @@ export class CardSkill extends LitElement {
       block-size: fit-content;
       padding-block: 10px;
       transform: scale(1.1);
-      & img {
+      & ::slotted(img) {
         display: none;
       }
 
@@ -69,7 +66,7 @@ export class CardSkill extends LitElement {
       }
     }
 
-    img {
+    ::slotted(img) {
       max-inline-size: 90%;
     }
 
@@ -80,7 +77,7 @@ export class CardSkill extends LitElement {
         overflow-y: scroll;
       }
 
-      img {
+      ::slotted(img) {
         inline-size: 35%;
       }
 
@@ -90,6 +87,12 @@ export class CardSkill extends LitElement {
 
       p {
         display: block;
+      }
+    }
+
+    @media (width <= 360px) {
+      div {
+        transform: scale(1);
       }
     }
   `;

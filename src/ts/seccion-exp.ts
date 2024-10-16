@@ -3,13 +3,10 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("seccion-exp")
 export class SeccionExp extends LitElement {
-  @property() imgUrl?: string;
-  @property() imgAlt?: string;
-
   protected render() {
     return html`
       <section>
-        <img src=${this.imgUrl} alt=${this.imgAlt} />
+        <slot name=img></img>
         <div>
           <p><slot></slot></p>
           <button class="izquierda">Repositorio</button>
@@ -41,7 +38,7 @@ export class SeccionExp extends LitElement {
       }
     }
 
-    img {
+    ::slotted(img) {
       inline-size: 752px;
       block-size: 406px;
     }
@@ -92,7 +89,7 @@ export class SeccionExp extends LitElement {
         flex-direction: column;
       }
 
-      img {
+      ::slotted(img) {
         inline-size: 100%;
         block-size: auto;
       }

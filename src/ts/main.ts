@@ -3,6 +3,7 @@ import "./card-hobbie";
 import "./seccion-exp";
 import "./card-formacion";
 
+// Inicio Sección Menú
 const menuLista = document.querySelector(".menu__lista") as HTMLImageElement;
 const menuEnlaces = document.querySelector(
   ".menu__enlaces",
@@ -53,3 +54,21 @@ if (formulario instanceof HTMLElement) {
   mantenerForma("[for=correo]", "#correo");
   mantenerForma("[for=asunto", "#asunto");
 }
+
+// Fin Sección Menú
+
+// Inicio Sección Mis dato
+
+/*const misDatos = document.querySelector(".mis-datos") as HTMLElement;
+
+window.addEventListener("resize", () => {
+  const titulo = misDatos.querySelector(
+    ".mis-datos__titulo",
+  ) as HTMLHeadElement;
+
+  if (window.innerWidth <= 1000) {
+    titulo.style.color = "red";
+  } else {
+    titulo.style.color = "white";
+  }
+  }); */

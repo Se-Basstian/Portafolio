@@ -5,16 +5,12 @@ import { customElement, property } from "lit/decorators.js";
 export class CardHobbie extends LitElement {
   @property()
   titulo = "Titulo";
-  @property()
-  imgUrl?: string;
-  @property()
-  imgAlt?: string;
 
   render() {
     return html`
       <div>
         <h3>${this.titulo}</h3>
-        <img src=${this.imgUrl} alt=${this.imgAlt} />
+        <slot name="img"></slot>
         <p><slot></slot></p>
       </div>
     `;
@@ -55,7 +51,7 @@ export class CardHobbie extends LitElement {
       }
     }
 
-    img {
+    ::slotted(img) {
       inline-size: 500px;
       margin-inline: 50px;
       margin-block: auto;
@@ -94,7 +90,7 @@ export class CardHobbie extends LitElement {
         margin-inline: auto;
       }
 
-      img {
+      ::slotted(img) {
         inline-size: 300px;
         margin-inline: 2.5% 10px;
         float: inline-start;

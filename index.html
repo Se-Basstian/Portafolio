@@ -27,6 +27,11 @@
                         <a href="#">Proyectos</a>
                     </li>
                 </ul>
+                <img
+                    class="menu__lista"
+                    src="./public/img/header/lista.png"
+                    alt="menú hamburgesa"
+                />
             </nav>
         </header>
 
@@ -34,7 +39,7 @@
             <article class="mis-datos">
                 <section class="mis-datos__general" centrar>
                     <h2 class="mis-datos__titulo">
-                        Hola, mi nombre es Sebastian y construyo páginas web
+                        Hola, me llamo Sebastian y construyo páginas web
                     </h2>
                     <p class="mis-datos__texto">
                         Me formé en SENATI (Servio Nacional de Adiestramiento en
@@ -61,7 +66,7 @@
                     <img
                         class="mis-datos__imagen"
                         src="/public/img/main/mis_datos/perfil.png"
-                        alt="Un chico guapo, osea yo"
+                        alt="Mi perfil"
                     />
                 </section>
 
@@ -79,7 +84,6 @@
                         cableado estructurador de redes LAN y el uso de
                         electronica básica para proyectos con Arduino.
                     </p>
-                    <br />
                     <p class="mis-datos__sobre-mi__texto" centrar>
                         Esa curiosidad por el mundo de las tecnologías de la
                         información me llevó a estudiar en SENATI un centro de
@@ -96,10 +100,12 @@
             <article class="skills">
                 <h2 class="skills__titulo" centrar>Skills</h2>
                 <section class="skills__cards" centrar>
-                    <card-skill
-                        titulo="HTML"
-                        imgUrl="/public/img/main/skills/Logo_html.svg"
-                    >
+                    <card-skill titulo="HTML">
+                        <img
+                            slot="img"
+                            src="/public/img/main/skills/Logo_html.svg"
+                            alt="html"
+                        />
                         HTML (HyperText Markup Language) es el lenguaje de
                         marcado estándar utilizado para crear y estructurar el
                         contenido en la web. Define la estructura básica de una
@@ -109,22 +115,24 @@
                         multimedia.
                     </card-skill>
 
-                    <card-skill
-                        titulo="CSS"
-                        imgUrl="/public/img/main/skills/Logo_css.svg"
-                        imgAlt="Logo de HTML"
-                    >
+                    <card-skill titulo="CSS">
+                        <img
+                            slot="img"
+                            src="/public/img/main/skills/Logo_css.svg"
+                            alt="css"
+                        />
                         CSS (Cascading Style Sheets) es un lenguaje de diseño
                         utilizado para describir la presentación visual de una
                         página web. Se encarga de definir cómo los elementos
                         HTML se muestran en la pantalla o en otros medios.
                     </card-skill>
 
-                    <card-skill
-                        titulo="JavaScript"
-                        imgUrl="/public/img/main/skills/Logo_js.svg"
-                        imgAlt="Logo de javascript"
-                    >
+                    <card-skill titulo="JavaScript">
+                        <img
+                            slot="img"
+                            src="/public/img/main/skills/Logo_js.svg"
+                            alt="JavaScript"
+                        />
                         JavaScript es un lenguaje de programación dinámico y
                         versátil que se utiliza principalmente para desarrollar
                         aplicaciones web interactivas. Junto con HTML y CSS, es
@@ -135,10 +143,12 @@
                         formularios, y mucho más.
                     </card-skill>
 
-                    <card-skill
-                        titulo="TapyScript"
-                        imgUrl="/public/img/main/skills/Logo_ts.svg"
-                    >
+                    <card-skill titulo="TapyScript">
+                        <img
+                            slot="img"
+                            src="/public/img/main/skills/Logo_ts.svg"
+                            alt="typescript"
+                        />
                         TypeScript es un lenguaje de programación basado en
                         JavaScript que añade tipado estático y características
                         avanzadas para mejorar el desarrollo de aplicaciones a
@@ -151,14 +161,15 @@
                 </section>
             </article>
 
-            <article class="hobbies">
+            <!-- <article class="hobbies">
                 <h2 class="hobbies__titulo" centrar>Hobbies</h2>
                 <section class="hobbies__cards" centrar>
-                    <card-hobbie
-                        titulo="Música"
-                        imgUrl="./public/img/main/hobbies/orquesta1.jpeg"
-                        imgAlt="Orquesta de Chancay"
-                    >
+                    <card-hobbie titulo="Música">
+                        <img
+                            slot="img"
+                            src="/public/img/main/hobbies/orquesta1.jpeg"
+                            alt="Orquesta de Chancya"
+                        />
                         Soy un apasionado de la música y tengo la suerte de
                         formar parte de una pequeña orquesta en Chancay. Mi
                         instrumento principal es el contrabajo, aunque también
@@ -171,11 +182,12 @@
                         y de la satisfacción de dominar un instrumento.
                     </card-hobbie>
 
-                    <card-hobbie
-                        titulo="Pelis y Series"
-                        imgUrl="./public/img/main/hobbies/Akira.jpg"
-                        imgAlt="Cartel de la Pélicula anime Akira"
-                    >
+                    <card-hobbie titulo="Pelis y Series">
+                        <img
+                            slot="img"
+                            src="/public/img/main/hobbies/Akira.jpg"
+                            alt="Cartel de la Pelicula Akira"
+                        />
                         Soy un apasionado del entretenimiento audiovisual. Me
                         encanta sumergirme en historias de ciencia ficción y
                         misterio, ya sea en series, películas o anime. Disfruto
@@ -192,44 +204,59 @@
                 <h2 class="formacion__titulo" centrar>Fromación Académica</h2>
                 <section class="formacion__cards" centrar>
                     <card-formacion
-                        imgUrl="./public/img/main/formacion/formacion_1.png"
-                        imgAlt="formación 1"
                         titulo="Análisis de datos"
                         datosExtra="2016 - UFRP"
                     >
+                        <img
+                            slot="img"
+                            src="/public/img/main/formacion/formacion_1.png"
+                            alt="Formación 1"
+                        />
                     </card-formacion>
 
                     <card-formacion
-                        imgUrl="./public/img/main/formacion/formacion_2.png"
-                        imgAlt="formación 2"
                         titulo="Formación en UX Design"
                         datosExtra="2019 - Alura"
-                    ></card-formacion>
+                    >
+                        <img
+                            slot="img"
+                            src="/public/img/main/formacion/formacion_2.png"
+                            alt="formación 2"
+                        />
+                    </card-formacion>
 
                     <card-formacion
-                        imgUrl="./public/img/main/formacion/formacion_3.png"
-                        imgAlt="formación 3"
                         titulo="Posgrado en design"
                         datosExtra="En curso - UFRJ"
-                    ></card-formacion>
+                    >
+                        <img
+                            slot="img"
+                            src="/public/img/main/formacion/formacion_3.png"
+                            alt="formación 3"
+                        />
+                    </card-formacion>
                 </section>
             </article>
 
             <article class="exp">
                 <h2 class="exp__titulo" centrar>Experiencia profesional</h2>
-                <seccion-exp
-                    imgUrl="./public/img/main/experiencia/Rectangle.png"
-                    imgAlt="Proyecto 1"
-                >
+                <seccion-exp>
+                    <img
+                        slot="img"
+                        src="/public/img/main/experiencia/Rectangle.png"
+                        alt="Proyecto 1"
+                    />
                     <b>Encriptador de texto</b>
                     <br />
                     Challenge Alura Codificador
                 </seccion-exp>
 
-                <seccion-exp
-                    imgUrl="./public/img/main/experiencia/Encriptador.png"
-                    imgAlt="Proyecto 2"
-                >
+                <seccion-exp>
+                    <img
+                        slot="img"
+                        src="/public/img/main/experiencia/Encriptador.png"
+                        alt="Proyecto 2"
+                    />
                     <b>Encripador de texto 2</b>
                     <br />
                     Challenge Alura Codificador
@@ -308,7 +335,7 @@
                         </button>
                     </form>
                 </div>
-            </article>
+            </article> -->
         </main>
         <script type="module" src="/src/ts/main.ts"></script>
     </body>

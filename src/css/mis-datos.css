@@ -1,39 +1,48 @@
-.mis-datos {
-}
-
 .mis-datos__general {
-    display: grid;
-    margin-block-start: 32px;
-    grid-template-columns: minmax(auto, 751px) minmax(auto, 368px);
-    grid-template-rows: minmax(160px, auto) minmax(240px, auto) minmax(
-            50px,
-            auto
-        );
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    block-size: 480px;
+    /* gap: 32px; */
+
+    @media (width <= 993px) {
+        block-size: 800px;
+        justify-content: space-around;
+    }
 }
 
 .mis-datos__titulo {
+    color: white;
     margin: 0;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    align-self: end;
+    margin-block-start: 32px;
+    inline-size: 66%;
+    max-block-size: 156px;
     font-size: 5.2rem;
+    line-height: 1.2;
+
+    @media (width <= 993px) {
+        max-block-size: 200px;
+    }
 }
 
 .mis-datos__texto {
-    margin: 0;
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-    align-self: center;
+    color: white;
+    margin: 32px 0;
+    inline-size: 66%;
     font-size: 2.2rem;
     line-height: 1.7;
+    max-block-size: 240px;
+
+    @media (width <= 993px) {
+        max-block-size: 300px;
+    }
 }
 
 .mis-redes {
+    color: white;
+    inline-size: 66%;
     margin: 0;
     padding: 0;
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-    align-self: center;
     display: flex;
     gap: 32px;
 }
@@ -49,7 +58,7 @@
         font-weight: bold;
         inline-size: fit-content;
         padding-right: 16px;
-        color: black;
+        color: white;
         transition:
             color 0.15s linear,
             font-size 0.15s linear,
@@ -66,87 +75,16 @@
 }
 
 .mis-datos__imagen {
-    max-inline-size: 360px;
-    aspect-ratio: 1 / 1;
-    grid-column: 2 / span 1;
-    grid-row: 1 / -1;
-    align-self: startr;
-    justify-self: center;
-}
+    max-inline-size: 300px;
 
-@media (width <= 768px) {
-    .mis-datos__general {
-        grid-template-rows: minmax(52px, auto) minmax(170px, auto) minmax(
-                50px,
-                auto
-            );
-    }
-
-    .mis-datos__titulo {
-        font-size: 2.2rem;
-    }
-
-    .mis-datos__texto,
-    a {
-        font-size: 1.6rem;
-    }
-
-    .mis-datos__imagen {
-        max-inline-size: 146px;
-        justify-self: center;
-        align-self: center;
-    }
-}
-
-@media (width <= 360px) {
-    .mis-datos__general {
-        grid-template-columns: minmax(auto, 360px);
-        grid-template-rows:
-            minmax(auto, 100px) minmax(auto, 100px) minmax(auto, 240px)
-            minmax(auto, 70px);
-    }
-
-    .mis-datos__imagen {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-        max-inline-size: 98px;
-        justify-self: left;
-        align-self: center;
-    }
-
-    .mis-datos__titulo {
-        grid-column: 1 / span 1;
-        grid-row: 2 / span 1;
-    }
-
-    .mis-datos__texto {
-        grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
-        font-size: 1.4rem;
-    }
-
-    .mis-redes {
-        grid-column: 1 / span 1;
-        grid-row: 4 / span 1;
-        overflow-x: scroll;
-        gap: 30px;
-        block-size: 35px;
-        border-block: 1px solid black;
-    }
-
-    .mis-redes__item {
-        block-size: 20px;
-        margin-block: auto;
-
-        & a {
-            font-size: 1.4rem;
-        }
+    @media (width <= 993px) {
+        max-inline-size: 260px;
     }
 }
 
 .mis-datos__sobre-mi {
-    background-color: #eaf2fd;
-    padding-block: 64px;
+    background-color: #bbbbbb;
+    padding-block: 32px;
     margin-block: 64px 32px;
 }
 
@@ -157,14 +95,91 @@
 
 .mis-datos__sobre-mi__texto {
     margin-block-start: 16px;
-    margin-block: 0;
     line-height: 1.8;
 }
 
+/* Para tablet */
 @media (width <= 768px) {
+    .mis-datos__general {
+        block-size: 350px;
+
+        @media (width <= 644px) {
+            block-size: 490px;
+        }
+
+        @media (width <= 423px) {
+            block-size: 580px;
+            justify-content: flex-start;
+            gap: 15px;
+        }
+    }
+
+    .mis-datos__titulo {
+        font-size: 2.2rem;
+        margin: 0;
+
+        @media (width <= 424px) {
+            inline-size: 100%;
+            order: -2;
+            margin-block-start: 16px;
+        }
+    }
+
+    .mis-datos__texto,
+    a {
+        font-size: 1.6rem;
+        margin-block: 16px;
+
+        @media (width <= 424px) {
+            inline-size: 100%;
+            margin: 0;
+        }
+    }
+
+    .mis-datos__imagen {
+        max-inline-size: 146px;
+
+        @media (width <= 424px) {
+            inline-size: 100%;
+            align-self: center;
+            order: -1;
+        }
+    }
+
+    .mis-redes {
+        /* overflow-x: scroll; */
+        @media (width <= 644px) {
+            block-size: 75px;
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        @media (width <= 424px) {
+            inline-size: 100%;
+            block-size: 74px;
+        }
+    }
+}
+
+@media (width <= 360px) {
+    .mis-datos__general {
+        block-size: 520px;
+    }
+
+    .mis-datos__texto,
+    a {
+        font-size: 1.4rem;
+    }
+
+    .mis-redes {
+        flex-flow: nowrap;
+        overflow-x: scroll;
+        block-size: 38px;
+        align-items: center;
+    }
+
     .mis-datos__sobre-mi {
-        padding-block: 32px;
-        margin-block: 32px;
+        margin-block: 16px;
     }
 
     .mis-datos__sobre-mi__titulo {
@@ -173,12 +188,5 @@
 
     .mis-datos__sobre-mi__texto {
         font-size: 1.4rem;
-    }
-}
-
-@media (width <= 360px) {
-    .mis-datos__sobre-mi {
-        margin-block: 16px 0;
-        padding-block: 16px;
     }
 }
