@@ -163,7 +163,7 @@
 
 @media (width <= 360px) {
     .mis-datos__general {
-        block-size: 520px;
+        block-size: 550px;
     }
 
     .mis-datos__texto,
