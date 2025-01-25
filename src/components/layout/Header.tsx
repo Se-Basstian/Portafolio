@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import type { FC, ReactNode } from 'react'
 
 type Props = {
-    children: ReactNode
+    children?: ReactNode
 }
 
 const Header: FC<Props> = ({ children }) => {
