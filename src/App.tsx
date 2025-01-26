@@ -1,12 +1,11 @@
-import Header from './components/layout/Header'
-import Banner from './components/header/Banner'
+import Header from './components/Header'
+import Main from './components/Main'
 
 function App() {
     return (
         <>
-            <Header>
-                <Banner />
-            </Header>
+            <Header />
+            <Main />
         </>
     )
 }
