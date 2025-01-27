@@ -6,7 +6,8 @@ const Header: FC = () => {
     return (
         <header
             className={clsx(
-                'w-full border-b-[1px] border-stone-700 pt-12 pb-8'
+                'w-full border-b-[1px] border-stone-700 pt-12 pb-8',
+                'bg-linear-to-tr from-sky-800 to-gray-500'
             )}
         >
             <Banner />
@@ -15,7 +16,7 @@ const Header: FC = () => {
                 <h2
                     className={clsx(
                         'text-3xl leading-12 font-semibold text-white',
-                        'max-[381px]:text-2xl max-[381px]:leading-10'
+                        'uppercase max-[381px]:text-2xl max-[381px]:leading-10'
                     )}
                 >
                     Sobre mí
