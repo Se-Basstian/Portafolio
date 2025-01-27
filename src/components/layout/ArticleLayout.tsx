@@ -7,28 +7,18 @@ type Props = {
     orientacion?: 'vertical' | 'horizontal'
 }
 
-const ArticleLayout: FC<Props> = ({
-    titulo,
-    children,
-    orientacion = 'vertical',
-}) => {
+const ArticleLayout: FC<Props> = ({ titulo, children }) => {
     return (
-        <article className={clsx('mt-9 w-full pb-10')}>
+        <article className={clsx('mt-9 mb-5 w-full')}>
             <h2
                 className={clsx(
                     'text-3xl leading-12 font-semibold text-white',
-                    'max-[381px]:text-2xl max-[381px]:leading-10'
+                    'mb-5 max-[381px]:text-2xl max-[381px]:leading-10'
                 )}
             >
                 {titulo}
             </h2>
-            <section
-                className={clsx('mt-5 w-full', {
-                    'flex flex-wrap gap-3': orientacion === 'horizontal',
-                })}
-            >
-                {children}
-            </section>
+            {children}
         </article>
     )
 }
