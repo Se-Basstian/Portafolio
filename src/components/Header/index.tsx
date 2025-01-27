@@ -4,10 +4,14 @@ import Banner from './Banner'
 
 const Header: FC = () => {
     return (
-        <header className={clsx('w-full border-b-[1px] border-stone-700 pb-8')}>
+        <header
+            className={clsx(
+                'w-full border-b-[1px] border-stone-700 pt-12 pb-8'
+            )}
+        >
             <Banner />
 
-            <article className="mt-8">
+            <article className="mx-auto mt-8 max-w-[950px] px-8 max-[381px]:px-3">
                 <h2
                     className={clsx(
                         'text-3xl leading-12 font-semibold text-white',

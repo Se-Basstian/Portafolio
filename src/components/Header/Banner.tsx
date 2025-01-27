@@ -8,7 +8,8 @@ const Banner: FC = () => {
     return (
         <article
             className={clsx(
-                'flex w-full gap-5 max-[554px]:flex-wrap max-[554px]:justify-center'
+                'mx-auto flex max-w-[950px] gap-5 px-8 max-[381px]:px-3',
+                'max-[554px]:flex-wrap max-[554px]:justify-center'
             )}
         >
             <img

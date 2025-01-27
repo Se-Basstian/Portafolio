@@ -15,7 +15,7 @@ const Navbar: FC = () => {
             >
                 <li
                     className={clsx(
-                        'rounded-2xl bg-blue-600 px-4 py-1 hover:bg-blue-500',
+                        'rounded-2xl bg-zinc-800 px-4 py-1 hover:bg-zinc-700',
                         'h-8'
                     )}
                 >
@@ -27,33 +27,33 @@ const Navbar: FC = () => {
                         p.sebastian.23.11.99@gmail.com
                     </a>
                 </li>
-                <li className={clsx('h-8 rounded-2xl border border-blue-600')}>
+                <li className={clsx('h-8 rounded-2xl border border-zinc-800')}>
                     <a
                         href="/One-CV.pdf"
                         download
                         className={clsx('flex h-full items-center px-3')}
                     >
-                        <IoDocumentTextOutline className="h-6 w-6 text-blue-600" />
+                        <IoDocumentTextOutline className="h-6 w-6 text-zinc-800" />
                     </a>
                 </li>
-                <li className={clsx('h-8 rounded-2xl border border-blue-600')}>
+                <li className={clsx('h-8 rounded-2xl border border-zinc-800')}>
                     <a
                         href="https://github.com/Se-Basstian/Se-Basstian"
                         target="_blank"
                         rel="noreferrer"
                         className={clsx('flex h-full items-center px-3')}
                     >
-                        <LuGithub className="h-6 w-6 text-blue-600" />
+                        <LuGithub className="h-6 w-6 text-zinc-800" />
                     </a>
                 </li>
-                <li className={clsx('h-8 rounded-2xl border border-blue-600')}>
+                <li className={clsx('h-8 rounded-2xl border border-zinc-800')}>
                     <a
                         target="_blank"
                         href="https://www.linkedin.com/in/p-sebastian-l-m-015413261/"
                         rel="noreferrer"
                         className={clsx('flex h-full items-center px-3')}
                     >
-                        <TiSocialLinkedin className="h-6 w-6 text-blue-600" />
+                        <TiSocialLinkedin className="h-6 w-6 text-zinc-800" />
                     </a>
                 </li>
             </ul>
