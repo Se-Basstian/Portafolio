@@ -6,6 +6,7 @@ import Formacion from '../common/Formacion'
 import imgEncriptador from '../../assets/images/proyectos/Encriptador.png'
 import imgOrg from '../../assets/images/proyectos/Organizador.png'
 import imgAluraFlix from '../../assets/images/proyectos/AluraFlix.png'
+import imgAlurGeek from '../../assets/images/proyectos/alura-geek.png'
 import clsx from 'clsx'
 import { IoSchoolSharp } from 'react-icons/io5'
 import { PiCertificateBold } from 'react-icons/pi'
@@ -35,6 +36,16 @@ const Main: FC = () => {
                         imageAlt="Una págian web con fondo negreo"
                         demoSrc="https://encriptador-nine-psi.vercel.app/"
                         repoSrc="https://github.com/Se-Basstian/Encriptador"
+                    />
+
+                    <Proyecto
+                        titulo="Alura-Geek"
+                        subtitulo="Proyecto de Aprendizaje"
+                        descripcion="Un lugar donde puedes organizar tus productos"
+                        imageSrc={imgAlurGeek}
+                        imageAlt="Una página web con colores morado y blanco"
+                        demoSrc="https://alura-geek-five-rouge.vercel.app/"
+                        repoSrc="https://github.com/Se-Basstian/Alura-Geek"
                     />
 
                     <Proyecto
